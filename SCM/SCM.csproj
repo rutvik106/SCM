@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A00570C-8C1A-44F4-8BB6-8E532AEAC7A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCM</RootNamespace>
+    <AssemblyName>SCM</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ManifestCertificateThumbprint>58B96CA24105B825E820B080DA61B14FE3F12780</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SCM_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>SCM_icon.ico</ApplicationIcon>
+    <StartupObject>SCM.Program</StartupObject>
+    <PublishUrl>C:\Users\Rutvik\Desktop\folder\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Item.Designer.cs">
+      <DependentUpon>Add Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Search.Designer.cs">
+      <DependentUpon>Admin Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About SCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About SCM.Designer.cs">
+      <DependentUpon>About SCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Supplier.Designer.cs">
+      <DependentUpon>Add Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory.cs">
+      <DependentUpon>inventory.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="inventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forgot Password.Designer.cs">
+      <DependentUpon>Forgot Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM.Designer.cs">
+      <DependentUpon>FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="purchase_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>purchase_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reportform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportform.Designer.cs">
+      <DependentUpon>reportform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOG.Designer.cs">
+      <DependentUpon>LOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qty_details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qty_details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reportform2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportform2.Designer.cs">
+      <DependentUpon>reportform2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports3.Designer.cs">
+      <DependentUpon>reports3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sales_report_table.cs">
+      <DependentUpon>sales_report_table.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sales_report_table.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sales_report_table.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCM_System_main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCM_System_main.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="select_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="select_rpt.Designer.cs">
+      <DependentUpon>select_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="scm_mainDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quick Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quick Mail.Designer.cs">
+      <DependentUpon>Quick Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase Invoice.Designer.cs">
+      <DependentUpon>Purchase Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scm_mainDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="scm_mainDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="scm_mainDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="System Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System Settings.Designer.cs">
+      <DependentUpon>System Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rate Updater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rate Updater.Designer.cs">
+      <DependentUpon>Rate Updater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Pass.Designer.cs">
+      <DependentUpon>Master Pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create Acc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create Acc.Designer.cs">
+      <DependentUpon>Create Acc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General Task.Designer.cs">
+      <DependentUpon>General Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scm_mainDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="scm_mainDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="scm_mainDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="General Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General Search.Designer.cs">
+      <DependentUpon>General Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Customer.Designer.cs">
+      <DependentUpon>Add Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Task.Designer.cs">
+      <DependentUpon>Admin Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Invoice.Designer.cs">
+      <DependentUpon>Sales Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add Item.resx">
+      <DependentUpon>Add Item.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Search.resx">
+      <DependentUpon>Admin Search.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About SCM.resx">
+      <DependentUpon>About SCM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Supplier.resx">
+      <DependentUpon>Add Supplier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System Settings.resx">
+      <DependentUpon>System Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rate Updater.resx">
+      <DependentUpon>Rate Updater.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Pass.resx">
+      <DependentUpon>Master Pass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create Acc.resx">
+      <DependentUpon>Create Acc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General Task.resx">
+      <DependentUpon>General Task.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General Search.resx">
+      <DependentUpon>General Search.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Customer.resx">
+      <DependentUpon>Add Customer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Task.resx">
+      <DependentUpon>Admin Task.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Invoice.resx">
+      <DependentUpon>Sales Invoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="scm_mainDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scm_mainDataSet3.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\chain1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attitude_free_3-1280x720.jpg" />
+    <None Include="scm_mainDataSet.xsc">
+      <DependentUpon>scm_mainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet.xss">
+      <DependentUpon>scm_mainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet1.xsc">
+      <DependentUpon>scm_mainDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet1.xss">
+      <DependentUpon>scm_mainDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet2.xsc">
+      <DependentUpon>scm_mainDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet2.xss">
+      <DependentUpon>scm_mainDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet3.xsc">
+      <DependentUpon>scm_mainDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet3.xss">
+      <DependentUpon>scm_mainDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SCM_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.9.2">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition SP2 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attitude_free.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attitude_free_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\SCM.Properties.Settings.datasource" />
+    <None Include="Resources\attitude_free_111.jpg" />
+    <None Include="scm_mainDataSet4.xsc">
+      <DependentUpon>scm_mainDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet4.xss">
+      <DependentUpon>scm_mainDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet5.xsc">
+      <DependentUpon>scm_mainDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet5.xss">
+      <DependentUpon>scm_mainDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet6.xsc">
+      <DependentUpon>scm_mainDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet6.xss">
+      <DependentUpon>scm_mainDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet7.xsc">
+      <DependentUpon>scm_mainDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="scm_mainDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scm_mainDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scm_mainDataSet7.xss">
+      <DependentUpon>scm_mainDataSet7.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forgot Password.resx">
+      <DependentUpon>Forgot Password.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM.resx">
+      <DependentUpon>FORM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inventory_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportform.resx">
+      <DependentUpon>reportform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Installer1.resx">
+      <DependentUpon>Installer1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOG.resx">
+      <DependentUpon>LOG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quick Mail.resx">
+      <DependentUpon>Quick Mail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase Invoice.resx">
+      <DependentUpon>Purchase Invoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportform2.resx">
+      <DependentUpon>reportform2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports3.resx">
+      <DependentUpon>reports3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\attitude_free_3-1280x720_1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sales_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="select_rpt.resx">
+      <DependentUpon>select_rpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="inventory.xsc">
+      <DependentUpon>inventory.xsd</DependentUpon>
+    </None>
+    <None Include="inventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="inventory.xss">
+      <DependentUpon>inventory.xsd</DependentUpon>
+    </None>
+    <None Include="purchase_dataset.xsc">
+      <DependentUpon>purchase_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="purchase_dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>purchase_dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="purchase_dataset.xss">
+      <DependentUpon>purchase_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="qty_details.xsc">
+      <DependentUpon>qty_details.xsd</DependentUpon>
+    </None>
+    <None Include="qty_details.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qty_details.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qty_details.xss">
+      <DependentUpon>qty_details.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\scm inside 1_new.bmp" />
+    <None Include="Resources\scm lay out_new.bmp" />
+    <None Include="Resources\chain1111_about_bg.png" />
+    <None Include="Resources\Bug50e7.png" />
+    <None Include="Resources\bug.png" />
+    <None Include="Resources\contactdetails.jpg" />
+    <None Include="Resources\scm lay out_new1.bmp" />
+    <None Include="Resources\scm inside 1_new1.bmp" />
+    <Content Include="Resources\SCM_icon.ico" />
+    <None Include="Resources\SCM_icon.png" />
+    <None Include="sales_report_table.xsc">
+      <DependentUpon>sales_report_table.xsd</DependentUpon>
+    </None>
+    <None Include="sales_report_table.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sales_report_table.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="sales_report_table.xss">
+      <DependentUpon>sales_report_table.xsd</DependentUpon>
+    </None>
+    <None Include="SCM_System_main.xsc">
+      <DependentUpon>SCM_System_main.xsd</DependentUpon>
+    </None>
+    <None Include="SCM_System_main.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCM_System_main.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCM_System_main.xss">
+      <DependentUpon>SCM_System_main.xsd</DependentUpon>
+    </None>
+    <Content Include="SCM_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

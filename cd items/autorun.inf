@@ -1,0 +1,9 @@
+[autorun]
+open=Setup\setup.exe
+icon=SCM_icon.ico
+label=SCM System
+
+[Content]
+MusicFiles=false
+PictureFiles=false
+VideoFiles=false

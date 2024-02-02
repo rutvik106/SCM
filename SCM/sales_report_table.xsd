@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sales_report_table" targetNamespace="http://tempuri.org/sales_report_table.xsd" xmlns:mstns="http://tempuri.org/sales_report_table.xsd" xmlns="http://tempuri.org/sales_report_table.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="scm_mainConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="scm_mainConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SCM.Properties.Settings.GlobalReference.Default.scm_mainConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources>
+          <DbSource ConnectionRef="scm_mainConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="fill_it" MethodsParameterType="CLR" Modifier="Public" Name="fill_it" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="fill_it">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT sales.no, sales.date, sales.customer_id, customer.customer_name, customer.customer_contact, sales.sinvoice_no, sinvoice.order_date, sinvoice.rate, sinvoice.vat, sinvoice.excise, sinvoice.net_total, sinvoice.user_id, user_master.contact FROM sales INNER JOIN sinvoice ON sales.sinvoice_no = sinvoice.sinvoice_no INNER JOIN customer ON sales.customer_id = customer.customer_id INNER JOIN user_master ON sinvoice.user_id = user_master.user_id</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sales_report_table" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="sales_report_table" msprop:Generator_DataSetName="sales_report_table" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sales_report" msprop:Generator_UserTableName="sales_report" msprop:Generator_RowDeletedName="sales_reportRowDeleted" msprop:Generator_RowChangedName="sales_reportRowChanged" msprop:Generator_RowClassName="sales_reportRow" msprop:Generator_RowChangingName="sales_reportRowChanging" msprop:Generator_RowEvArgName="sales_reportRowChangeEvent" msprop:Generator_RowEvHandlerName="sales_reportRowChangeEventHandler" msprop:Generator_TableClassName="sales_reportDataTable" msprop:Generator_TableVarName="tablesales_report" msprop:Generator_RowDeletingName="sales_reportRowDeleting" msprop:Generator_TablePropName="sales_report">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no" msprop:Generator_UserColumnName="no" msprop:Generator_ColumnVarNameInTable="columnno" msprop:Generator_ColumnPropNameInRow="no" msprop:Generator_ColumnPropNameInTable="noColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="customer_id" msprop:Generator_UserColumnName="customer_id" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_UserColumnName="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_contact" msprop:Generator_UserColumnName="customer_contact" msprop:Generator_ColumnVarNameInTable="columncustomer_contact" msprop:Generator_ColumnPropNameInRow="customer_contact" msprop:Generator_ColumnPropNameInTable="customer_contactColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="sinvoice_no" msprop:Generator_UserColumnName="sinvoice_no" msprop:Generator_ColumnVarNameInTable="columnsinvoice_no" msprop:Generator_ColumnPropNameInRow="sinvoice_no" msprop:Generator_ColumnPropNameInTable="sinvoice_noColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="order_date" msprop:Generator_UserColumnName="order_date" msprop:Generator_ColumnVarNameInTable="columnorder_date" msprop:Generator_ColumnPropNameInRow="order_date" msprop:Generator_ColumnPropNameInTable="order_dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="rate" msprop:Generator_UserColumnName="rate" msprop:Generator_ColumnVarNameInTable="columnrate" msprop:Generator_ColumnPropNameInRow="rate" msprop:Generator_ColumnPropNameInTable="rateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vat" msprop:Generator_UserColumnName="vat" msprop:Generator_ColumnVarNameInTable="columnvat" msprop:Generator_ColumnPropNameInRow="vat" msprop:Generator_ColumnPropNameInTable="vatColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="excise" msprop:Generator_UserColumnName="excise" msprop:Generator_ColumnVarNameInTable="columnexcise" msprop:Generator_ColumnPropNameInRow="excise" msprop:Generator_ColumnPropNameInTable="exciseColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="net_total" msprop:Generator_UserColumnName="net_total" msprop:Generator_ColumnVarNameInTable="columnnet_total" msprop:Generator_ColumnPropNameInRow="net_total" msprop:Generator_ColumnPropNameInTable="net_totalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="user_id" msprop:Generator_UserColumnName="user_id" msprop:Generator_ColumnVarNameInTable="columnuser_id" msprop:Generator_ColumnPropNameInRow="user_id" msprop:Generator_ColumnPropNameInTable="user_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="contact" msprop:Generator_UserColumnName="contact" msprop:Generator_ColumnVarNameInTable="columncontact" msprop:Generator_ColumnPropNameInRow="contact" msprop:Generator_ColumnPropNameInTable="contactColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
