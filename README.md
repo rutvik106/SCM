@@ -1,0 +1,1 @@
+Supply Chain Management project by me. This was my very first C# .Net propject in my Diploma Computer Engineering at L.J Polytechnic College, Ahmedabad, Gujarat. This project was created in year 2012. Here is the link to the DOC which I submitted in my college https://1drv.ms/w/s!AtHtpuRLu21chJAz3JNfbicR2mwlTA?e=4eYgrQ
